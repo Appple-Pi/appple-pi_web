@@ -3,8 +3,11 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import StyledComponentsRegistry from "@/lib/registry";
 import React from "react";
+import localFont from "next/font/local";
 
-const inter = Inter({subsets: ['latin']})
+const suit = localFont({
+  src: '../assets/fonts/SUIT-Variable.ttf',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <body className={inter.className}>
+    <body className={suit.className}>
     <StyledComponentsRegistry>
       {children}
     </StyledComponentsRegistry>
