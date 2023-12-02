@@ -13,7 +13,7 @@ const LifeSection = () => {
   return (
     <Container>
       <Image
-        style={{position: 'absolute', zIndex: -1}}
+        style={{position: 'absolute', zIndex: -1, objectFit: 'cover'}}
         quality={100}
         src={LifeImage} alt={'life_image'} fill/>
       <Column gap={24} alignItems={'center'}>
