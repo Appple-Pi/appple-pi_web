@@ -1,0 +1,12 @@
+.github
+.next
+out
+.idea
+.dockerignore
+.git
+README.md
+.yarn/unplugged
+.yarn/berry
+.yarn/install-state.gz
+.gitignore
+node_modules
