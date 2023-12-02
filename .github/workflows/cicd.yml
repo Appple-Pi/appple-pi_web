@@ -31,7 +31,7 @@ jobs:
               context: .
               platforms: linux/arm64
               push: true
-              tags: ${{ secrets.DOCKER_USERNAME }}/next:latest
+              tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_CONTAINER_NAME }}:latest
 
           - name: executing remote ssh commands using password
             uses: appleboy/ssh-action@master
