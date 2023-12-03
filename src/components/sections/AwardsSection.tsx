@@ -50,8 +50,10 @@ const AwardsContainer = styled.div`
   display: grid;
   width: 100%;
   gap: 20px;
+  height: 360px;
+  overflow-y: hidden;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  column-count: 2;
   @media (max-width: 1700px) {
     grid-template-columns: repeat(3, 1fr);
   }
