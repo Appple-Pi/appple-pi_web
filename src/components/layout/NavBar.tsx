@@ -26,7 +26,7 @@ const NavBar = ({children}: NavBarProps) => {
   }, []);
 
   return (
-    <Container>
+    <Container isScrolled={isScrolled}>
       <Row padding={[20, 160]} justifyContent={'space-between'} alignItems={'center'} fill>
         <AppplePiLogo
           width={'42px'} height={'42px'}
@@ -43,10 +43,12 @@ const NavBar = ({children}: NavBarProps) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ isScrolled: boolean }>`
   position: fixed;
   width: 100%;
   z-index: 100;
+  background-color: ${props => props.isScrolled ? colors.white : 'transparent'};
+  transition: background-color 0.3s ease-in-out;
 `;
 
 export default NavBar;
