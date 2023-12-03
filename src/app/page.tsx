@@ -15,6 +15,7 @@ import XMLIcon from "@public/icons/curriculum/xml.svg";
 import KotlinIcon from "@public/icons/curriculum/kotlin.svg";
 import ComposeIcon from "@public/icons/curriculum/compose.svg";
 import AndroidIcon from "@public/icons/curriculum/andoird.svg";
+import AwardsSection from "@/components/sections/AwardsSection";
 
 
 const Home = () => {
@@ -53,6 +54,7 @@ const Home = () => {
         <CurriculumCard title={'방학 프로젝트'} description={'여름방학 시즌에 개발자와 함께\n프로젝트를 진행합니다.'} Icon={XMLIcon}/>
         <CurriculumCard title={'브랜딩 디자인'} description={'브랜딩에 대해 배워봅니다.\n또한 브랜딩을 실습해봅니다.'} Icon={XMLIcon}/>
       </CurriculumSection>
+      <AwardsSection />
       <LifeSection/>
     </>
   );
