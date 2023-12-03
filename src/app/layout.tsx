@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
     <body className={suit.className}>
     <StyledComponentsRegistry>
-      {/*<NavBar/>*/}
+      <NavBar/>
       {children}
       <Footer/>
     </StyledComponentsRegistry>
