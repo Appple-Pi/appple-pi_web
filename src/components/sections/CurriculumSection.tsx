@@ -22,35 +22,43 @@ const CurriculumSection = forwardRef<HTMLDivElement, CurriculumSectionProps>(({
   return (
     <Column
       ref={ref}
-      padding={[258, 160]}
+      padding={[258, 0]}
       justifyContent={'center'}
       alignItems={'center'}
       backgroundColor={backgroundColor}>
-      <TitleContainer>
-        <Typography.SemiBold7 color={colors.red500}>
+      <Title>
           {title}
-        </Typography.SemiBold7>
-      </TitleContainer>
+      </Title>
       <Spacer height={16}/>
       <Typography.Bold5 color={colors.gray900}>
         {description}
       </Typography.Bold5>
       <Spacer height={48}/>
-      <Row gap={10} fill justifyContent={'flex-start'} style={{
-        overflowX: 'scroll',
-      }}>
+      <CurriculumContainer>
         {children}
-      </Row>
+      </CurriculumContainer>
     </Column>
   );
 });
 CurriculumSection.displayName = 'CurriculumSection'
 
-const TitleContainer = styled.div`
+const Title = styled(Typography.SemiBold7)`
   border-radius: 12px;
+  color: ${colors.red500};
   background-color: ${colors.red50};
   padding: 12px;
 `;
 
+const CurriculumContainer = styled.div`
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 1700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
 
 export default CurriculumSection;

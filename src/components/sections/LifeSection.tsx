@@ -23,7 +23,7 @@ const LifeSection = () => {
         </Row>
         <Button onClick={()=>{}}>
           <Typography.SemiBold10 color={colors.white}>슬기로운 애플파이 생활</Typography.SemiBold10>
-          <RightArrow />
+          <RightArrow width={24} height={24} fill={colors.white}/>
         </Button>
       </Column>
     </Container>

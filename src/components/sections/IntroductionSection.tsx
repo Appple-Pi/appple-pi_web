@@ -12,11 +12,9 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_,ref) => {
   return (
     <Row padding={[250, 160]} justifyContent={'space-between'} alignItems={'center'} fill ref={ref}>
       <Column>
-        <TitleContainer>
-          <Typography.SemiBold7 color={colors.red500}>
+        <Title>
             최고의 앱 개발 창업 동아리
-          </Typography.SemiBold7>
-        </TitleContainer>
+        </Title>
         <Spacer height={16}/>
         <Typography.Bold5 color={colors.gray900}>무언가에 몰입하는 애플파이</Typography.Bold5>
         <Spacer height={32}/>
@@ -37,8 +35,9 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_,ref) => {
 });
 IntroductionSection.displayName = 'IntroductionSection'
 
-const TitleContainer = styled.div`
+const Title = styled(Typography.SemiBold7)`
   border-radius: 12px;
+  color: ${colors.red500};
   background-color: ${colors.red50};
   padding: 12px;
 `;
