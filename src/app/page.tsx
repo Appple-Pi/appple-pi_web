@@ -5,17 +5,25 @@ import WelcomeSection from "@/components/sections/WelcomeSection";
 import {Column, Row} from "@/components/base/Atomic";
 import Typography from "@/components/base/Typography";
 import colors from "@/themes/colors";
+
+//sections
 import CurriculumSection from "@/components/sections/CurriculumSection";
 import CurriculumCard from "@/components/CurriculumCard";
 import IntroductionSection from "@/components/sections/IntroductionSection";
 import LifeSection from "@/components/sections/LifeSection";
+import AwardsSection from "@/components/sections/AwardsSection";
 
-//curriculum icons
+//developer curriculum icons
 import XMLIcon from "@public/icons/curriculum/xml.svg";
 import KotlinIcon from "@public/icons/curriculum/kotlin.svg";
 import ComposeIcon from "@public/icons/curriculum/compose.svg";
 import AndroidIcon from "@public/icons/curriculum/andoird.svg";
-import AwardsSection from "@/components/sections/AwardsSection";
+
+//designer curriculum icons
+import FigmaIcon from "@public/icons/curriculum/figma.svg";
+import BeachIcon from "@public/icons/curriculum/beach.svg";
+import ArtistIcon from "@public/icons/curriculum/artist.svg";
+import PhoneIcon from "@public/icons/curriculum/phone.svg";
 
 
 const Home = () => {
@@ -49,10 +57,10 @@ const Home = () => {
       </CurriculumSection>
       {/*Designer Curriculum*/}
       <CurriculumSection title={'디자이너 커리큘럼'} description={'UI·UX 디자이너, 그 이상의 디자이너.'}>
-        <CurriculumCard title={'Figma 기초'} description={'UI·UX 제작 전 툴에 대한\n이해도를 높여나갑니다.'} Icon={XMLIcon}/>
-        <CurriculumCard title={'UI·UX 디자인'} description={'앱 UI·UX 제작을 통해 UI에 대한\n'} Icon={XMLIcon}/>
-        <CurriculumCard title={'방학 프로젝트'} description={'여름방학 시즌에 개발자와 함께\n프로젝트를 진행합니다.'} Icon={XMLIcon}/>
-        <CurriculumCard title={'브랜딩 디자인'} description={'브랜딩에 대해 배워봅니다.\n또한 브랜딩을 실습해봅니다.'} Icon={XMLIcon}/>
+        <CurriculumCard title={'Figma 기초'} description={'UI·UX 제작 전 툴에 대한\n이해도를 높여나갑니다.'} Icon={FigmaIcon}/>
+        <CurriculumCard title={'UI·UX 디자인'} description={'앱 UI·UX 제작을 통해 UI에 대한\n'} Icon={PhoneIcon}/>
+        <CurriculumCard title={'방학 프로젝트'} description={'여름방학 시즌에 개발자와 함께\n프로젝트를 진행합니다.'} Icon={BeachIcon}/>
+        <CurriculumCard title={'브랜딩 디자인'} description={'브랜딩에 대해 배워봅니다.\n또한 브랜딩을 실습해봅니다.'} Icon={ArtistIcon}/>
       </CurriculumSection>
       <AwardsSection />
       <LifeSection/>
