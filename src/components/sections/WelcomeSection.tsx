@@ -9,6 +9,7 @@ import colors from "@/themes/colors";
 import localFont from "next/font/local";
 import GroupImage from "@public/images/group_image.png";
 import AppplePi from "@public/icons/appple_pi.svg";
+import MoreIcon from "@public/icons/more.svg";
 
 const ydestreetB = localFont({src: '../../assets/fonts/YdestreetB.ttf',});
 
@@ -37,6 +38,12 @@ const WelcomeSection = () => {
         </Column>
         <Spacer height={64}/>
       </Column>
+      <MoreContainer>
+        <Typography.Medium9 color={colors.white} id='text'>
+          더 알아보기
+        </Typography.Medium9>
+        <MoreIcon id='icon'/>
+      </MoreContainer>
     </Container>
   );
 };
@@ -48,6 +55,27 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+`;
+
+const MoreContainer = styled.div`
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  animation: motion 0.8s linear 0s infinite alternate;
+  @keyframes motion {
+    0% {
+      bottom: 50px;
+      //margin-bottom: 0;
+    }
+    100% {
+      //margin-bottom: 100px;
+      bottom: 35px;
+    }
+  }
 `;
 
 export default WelcomeSection;
