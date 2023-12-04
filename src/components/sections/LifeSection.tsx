@@ -39,7 +39,7 @@ const Container = styled.div`
   height: 500px;
 `;
 
-const Button = styled.div`
+const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,6 @@ const Button = styled.div`
   gap: 10px;
   border: none;
   cursor: pointer;
-  
   &:active {
     background-color: ${colors.red600};
   }
