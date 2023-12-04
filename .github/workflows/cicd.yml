@@ -41,8 +41,8 @@ jobs:
                 key: ${{ secrets.SSH_KEY }}
                 port: ${{ secrets.SSH_PORT }}
                 script: |
-                  docker rm -f ${{ secrets.DOCKER_CONTAINER_NAME }}
                   docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_CONTAINER_NAME }}
+                  docker rm -f ${{ secrets.DOCKER_CONTAINER_NAME }}
                   docker run -d -p 80:3000 --name ${{ secrets.DOCKER_CONTAINER_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_CONTAINER_NAME }}
 #                  docker-compose up -d
 #                  docker image prune -f
