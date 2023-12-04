@@ -68,7 +68,7 @@ const Home = () => {
       {/*Designer Curriculum*/}
       <CurriculumSection title={'디자이너 커리큘럼'} description={'UI·UX 디자이너, 그 이상의 디자이너.'}>
         <CurriculumCard title={'Figma 기초'} description={'UI·UX 제작 전 툴에 대한\n이해도를 높여나갑니다.'} Icon={FigmaIcon}/>
-        <CurriculumCard title={'UI·UX 디자인'} description={'앱 UI·UX 제작을 통해 UI에 대한\n'} Icon={PhoneIcon}/>
+        <CurriculumCard title={'UI·UX 디자인'} description={'앱 UI·UX 제작을 통해 UI에 대한\n이해도를 높여나갑니다.'} Icon={PhoneIcon}/>
         <CurriculumCard title={'방학 프로젝트'} description={'여름방학 시즌에 개발자와 함께\n프로젝트를 진행합니다.'} Icon={BeachIcon}/>
         <CurriculumCard title={'브랜딩 디자인'} description={'브랜딩에 대해 배워봅니다.\n또한 브랜딩을 실습해봅니다.'} Icon={ArtistIcon}/>
       </CurriculumSection>
