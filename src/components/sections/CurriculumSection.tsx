@@ -1,10 +1,12 @@
 'use client'
 
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useEffect} from 'react';
 import {Column, Row, Spacer} from "@/components/base/Atomic";
 import styled from "styled-components";
 import colors from "@/themes/colors";
 import Typography from "@/components/base/Typography";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 interface CurriculumSectionProps {
   title: string;
@@ -19,6 +21,10 @@ const CurriculumSection = forwardRef<HTMLDivElement, CurriculumSectionProps>(({
                                                                              children,
                                                                              backgroundColor
                                                                            }, ref) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Column
       ref={ref}
@@ -26,15 +32,15 @@ const CurriculumSection = forwardRef<HTMLDivElement, CurriculumSectionProps>(({
       justifyContent={'center'}
       alignItems={'center'}
       backgroundColor={backgroundColor}>
-      <Title>
+      <Title data-aos="fade-up" data-aos-duration="800">
           {title}
       </Title>
       <Spacer height={16}/>
-      <Typography.Bold5 color={colors.gray900}>
+      <Typography.Bold5 color={colors.gray900} data-aos="fade-up" data-aos-duration="1000">
         {description}
       </Typography.Bold5>
       <Spacer height={48}/>
-      <CurriculumContainer>
+      <CurriculumContainer data-aos="fade-right" data-aos-duration="1200">
         {children}
       </CurriculumContainer>
     </Column>

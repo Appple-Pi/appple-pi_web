@@ -1,33 +1,24 @@
 'use client'
 
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from "styled-components";
 import colors from "@/themes/colors";
 import {Column, Spacer} from "@/components/base/Atomic";
 import Typography from "@/components/base/Typography";
 import AwardCard from "@/components/AwardCard";
 import RightArrow from "@public/icons/right_arrow.svg";
-import AOS from "aos";
-import 'aos/dist/aos.css';
 
-const AwardsSection = () => {
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+const PortfolioSection = () => {
   return (
     <Container>
       <Column padding={[168, 0]} alignItems={'center'} fill>
-        <Title data-aos="fade-up" data-aos-duration="800">
-          수상 실적
-        </Title>
+        <Title>수상 실적</Title>
         <Spacer height={16}/>
-        <Typography.Bold5 color={colors.gray900} data-aos="fade-up" data-aos-duration="1000">
+        <Typography.Bold5 color={colors.gray900}>
           그동안 애플파이는 무엇을 이루었나요?
         </Typography.Bold5>
         <Spacer height={48}/>
-        <AwardsContainer data-aos="fade-up" data-aos-duration="1200">
+        <AwardsContainer>
           {Array(12).fill(0).map((_, index) => (
             <AwardCard
               key={index}
@@ -36,7 +27,7 @@ const AwardsSection = () => {
           ))}
         </AwardsContainer>
         <Linear/>
-        <Button data-aos="fade-up" data-aos-duration="500">
+        <Button>
           <Typography.SemiBold6>
             다른 수상 실적 보러가기
           </Typography.SemiBold6>
@@ -59,10 +50,8 @@ const AwardsContainer = styled.div`
   display: grid;
   width: 100%;
   gap: 20px;
-  height: 360px;
-  overflow-y: hidden;
   grid-template-columns: repeat(4, 1fr);
-  column-count: 2;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   @media (max-width: 1700px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -100,10 +89,9 @@ const Button = styled.div`
   gap: 12px;
   position: absolute;
   bottom: 80px;
-
   &:active {
     background-color: ${colors.gray100};
-      //color: ${colors.white};
+     //color: ${colors.white};
   }
 `;
-export default AwardsSection;
+export default PortfolioSection;

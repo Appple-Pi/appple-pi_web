@@ -1,24 +1,33 @@
 'use client'
 
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useEffect} from 'react';
 import {Column, Row, Spacer} from "@/components/base/Atomic";
 import colors from "@/themes/colors";
 import styled from "styled-components";
 import Typography from '@/components/base/Typography';
 import IntroductionImage from '@public/images/introduction_image.png';
 import Image from "next/image";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const IntroductionSection = forwardRef<HTMLDivElement>((_,ref) => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Row padding={[250, 160]} justifyContent={'space-between'} alignItems={'center'} fill ref={ref}>
       <Column>
-        <Title>
+        <Title data-aos="fade-up" data-aos-duration="800">
             최고의 앱 개발 창업 동아리
         </Title>
         <Spacer height={16}/>
-        <Typography.Bold5 color={colors.gray900}>무언가에 몰입하는 애플파이</Typography.Bold5>
+        <Typography.Bold5 color={colors.gray900} data-aos="fade-up" data-aos-duration="1000">
+          무언가에 몰입하는 애플파이
+        </Typography.Bold5>
         <Spacer height={32}/>
-        <IntroductionText>
+        <IntroductionText data-aos="fade-up" data-aos-duration="1200">
           애플파이는 선린인터넷고등학교의 교내 <b>앱 개발 창업 동아리</b>입니다.<br/>
           안드로이드 앱 개발과 UI/UX 디자인을 중점으로 매년 꾸준한 실적을 내고있습니다.<br/>
           또한, 화목하고 즐거운 분위기와 체계적인 커리큘럼으로 인해 선후배간의 교류가 높은 편으로,<br/>
@@ -27,7 +36,7 @@ const IntroductionSection = forwardRef<HTMLDivElement>((_,ref) => {
           <b>모바일의 혁신을 향하여, App:ple Pi</b>
         </IntroductionText>
       </Column>
-      <ImageContainer>
+      <ImageContainer data-aos="fade-left" data-aos-duration="800">
         <Image src={IntroductionImage} alt={'introduction image'} width={346} height={346}/>
       </ImageContainer>
     </Row>
