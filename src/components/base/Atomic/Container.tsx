@@ -26,6 +26,7 @@ const base = styled.div<ContainerProps>`
   };
   flex-wrap: ${props => props.wrap ? 'wrap' : 'nowrap'};
   background-color: ${props => props.backgroundColor || 'transparent'};
+  width: ${props => props.fill ? '100%' : 'auto'};
 `;
 
 export const Column = styled(base)`

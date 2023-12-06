@@ -18,7 +18,7 @@ const AwardsSection = () => {
 
   return (
     <Container>
-      <Column padding={[168, 0]} alignItems={'center'} fill>
+      <Column padding={[168, 0]} alignItems={'center'}>
         <Title data-aos="fade-up" data-aos-duration="800">
           수상 실적
         </Title>
@@ -61,13 +61,13 @@ const AwardsContainer = styled.div`
   gap: 20px;
   height: 360px;
   overflow-y: hidden;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   column-count: 2;
   @media (max-width: 1700px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
   }
   @media (max-width: 1300px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
   }
 `;
 
