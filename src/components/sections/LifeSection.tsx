@@ -15,7 +15,9 @@ const LifeSection = () => {
       <Image
         style={{position: 'absolute', zIndex: -1, objectFit: 'cover'}}
         quality={100}
-        src={LifeImage} alt={'life_image'} fill/>
+        priority={true}
+        src={LifeImage} alt={'life_image'}
+        fill/>
       <Column gap={24} alignItems={'center'}>
         <Row>
           <Typography.Bold6 color={colors.white}>애플파이</Typography.Bold6>
